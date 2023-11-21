@@ -3,12 +3,12 @@ import sys
 
 def main():
     pg.display.set_caption("はじめてのPygame")
-    screen = pg.display.set_mode((800, 600))
+    screen = pg.display.set_mode((800, 600))#画面サイズ設定
     clock = pg.time.Clock()
     font = pg.font.Font(None, 80)
 
-    enn = pg.Surface((20, 20))
-    pg.draw.circle(enn, (255, 0, 0), (10, 10), 10)
+    enn = pg.Surface((20, 20))#円の描画用の枠を作る
+    pg.draw.circle(enn, (0, 0, 255), (10, 10), 10)#円の描画　色、中心座標
     enn.set_colorkey((0, 0, 0))
 
     tmr = 0
@@ -22,7 +22,7 @@ def main():
         screen.blit(enn, [100, 400])
         pg.display.update()
         tmr += 1        
-        clock.tick(1)
+        clock.tick(3)#while文が1秒に回る回数
 
 
 if __name__ == "__main__":
