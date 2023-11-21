@@ -16,6 +16,7 @@ def main():
             if event.type == pg.QUIT: return
 
         screen.blit(bg_img, [0, 0])#練習4背景表示
+        screen.blit(kk_imgs[tmr%2], [300,200])#練習5こうかとん表示
         pg.display.update()
         tmr += 1        
         clock.tick(10)
